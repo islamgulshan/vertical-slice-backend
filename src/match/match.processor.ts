@@ -3,6 +3,7 @@ import { Job } from 'bull';
 import { Inject, Logger } from '@nestjs/common';
 import { Pool } from 'pg';
 import { textToVector } from './../utlis/text-to-vector';
+import Redis from 'ioredis';
 
 @Processor('match-queue')
 export class MatchProcessor {
@@ -10,7 +11,7 @@ export class MatchProcessor {
 
   constructor(
     @Inject('PG_POOL') private readonly db: Pool,
-    @Inject('REDIS_CLIENT') private readonly redisClient: any, // Redis client injected
+    @Inject('REDIS_CLIENT') private readonly redisClient: Redis,
   ) {}
 
   @Process('match-job')
