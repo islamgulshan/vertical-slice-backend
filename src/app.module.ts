@@ -12,13 +12,9 @@ import { DbModule } from './db/db.module';
     DbModule,
     BullModule.forRoot({
       redis: {
-        host:
-          process.env.REDIS_HOST ||
-          'redis-18745.c44.us-east-1-2.ec2.redns.redis-cloud.com',
-        port: process.env.REDIS_PORT ? +process.env.REDIS_PORT : 18745,
-        password: process.env.REDIS_PASSWORD
-          ? process.env.REDIS_PASSWORD
-          : 'MwtTXZjdyiFNI48QoA1JUoPKmMX8RAK9',
+        host: 'redis-18745.c44.us-east-1-2.ec2.redns.redis-cloud.com',
+        port: 18745,
+        password: 'MwtTXZjdyiFNI48QoA1JUoPKmMX8RAK9',
       },
     }),
 
