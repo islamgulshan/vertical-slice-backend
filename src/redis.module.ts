@@ -10,7 +10,6 @@ import Redis from 'ioredis';
           host: 'redis-18745.c44.us-east-1-2.ec2.redns.redis-cloud.com',
           port: 18745,
           password: 'MwtTXZjdyiFNI48QoA1JUoPKmMX8RAK9',
-          tls: {}, // Add this if you're using Redis Cloud or TLS is required
         });
       },
     },
